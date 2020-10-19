@@ -24,6 +24,10 @@ This extension contributes the following settings:
 
 Initialize Project.
 
+### 0.0.2
+
+Add ICONS and project PS.
+
 ## Ps
 
 This project is a reconstruction based on [vscode-include-autocomplete](https://github.com/ajshort/vscode-include-autocomplete), and the [vscode-include-autocomplete](https://github.com/ajshort/vscode-include-autocomplete) project has not been updated for 3 years. Especially, it does not support the multi-workspace mechanism of VScode, so I created this project based on it to support the multi-workspace mechanism
