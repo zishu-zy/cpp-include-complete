@@ -187,10 +187,21 @@ class CIncludeCompletion implements vscode.CompletionItemProvider, vscode.Dispos
                     workspace.completionDirs = ["/usr/include", "/usr/include/c++"];
                 }
             }
+
             let defIndex = workspace.completionDirs.indexOf("${default}");
             if (defIndex !== -1) {
-                workspace.completionDirs.splice(defIndex, 1);
+                let pathDefault: string[] = vscode.workspace
+                    .getConfiguration("C_Cpp")
+                    .get("default.includePath", []);
+                workspace.completionDirs = workspace.completionDirs.concat(pathDefault);
+
+                defIndex = workspace.completionDirs.indexOf("${default}");
+                while (defIndex !== -1) {
+                    workspace.completionDirs.splice(defIndex, 1);
+                    defIndex = workspace.completionDirs.indexOf("${default}");
+                }
             }
+            console.log("workspace.completionDirs: ", workspace.completionDirs);
 
             workspace.completionDirs = workspace.completionDirs.map(
                 (dir: {
