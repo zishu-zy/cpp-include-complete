@@ -3,8 +3,13 @@
     "displayName": "cpp-include-complete",
     "description": "",
     "version": "0.0.1",
+    "publisher": "zishuzy",
     "engines": {
         "vscode": "^1.46.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zishu-zy/cpp-include-complete.git"
     },
     "categories": [
         "Other"
