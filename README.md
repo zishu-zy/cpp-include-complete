@@ -10,7 +10,7 @@ When you type < or " to begin the file name, the extension will scan your includ
 
 The extension uses the same c_cpp_properties.json file as the Microsoft C++ Tools extension to configure the include directories to search. Add additional directories to your platform's includePath setting to include it in suggestions. You can use `${workspaceFolder}` in include paths to spcify the current open workspace path.
 
-![feature X](images/example_0.gif)
+![example](https://zishuzy.coding.net/p/open_source/d/cpp-include-complete/git/raw/master/images/example_0.gif)
 
 ## Extension Settings
 
