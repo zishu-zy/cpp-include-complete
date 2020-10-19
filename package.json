@@ -1,7 +1,8 @@
 {
     "name": "cpp-include-complete",
     "displayName": "cpp-include-complete",
-    "description": "",
+    "description": "Autocompletion for C/C++ includes",
+    "icon": "icon.png",
     "version": "0.0.1",
     "publisher": "zishuzy",
     "engines": {
