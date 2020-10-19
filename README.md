@@ -26,6 +26,6 @@ This project is a reconstruction based on [vscode-include-autocomplete](https://
 
 Initialize Project.
 
-### 0.0.2
+### 0.0.3
 
 Add ICONS and project PS.
