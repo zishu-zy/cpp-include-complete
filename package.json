@@ -19,8 +19,8 @@
             "title": "Include Autocomplete",
             "type": "object",
             "properties": {
-                "cpp-include-complete.extensions": {
-                    "description": "File extensions for header files",
+                "cpp-include-complete.postfix": {
+                    "description": "File postfix for header files",
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -34,12 +34,7 @@
                 }
             }
         },
-        "commands": [
-            {
-                "command": "cpp-include-complete.helloWorld",
-                "title": "Hello World"
-            }
-        ]
+        "commands": []
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

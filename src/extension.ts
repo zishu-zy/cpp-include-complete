@@ -72,10 +72,10 @@ class CIncludeCompletion implements vscode.CompletionItemProvider, vscode.Dispos
         const contents = match[1].substr(1);
 
         let dirs = wsInfo.completionDirs.slice();
-        let exts: string[] = vscode.workspace
+        let postfixes: string[] = vscode.workspace
             .getConfiguration("cpp-include-complete")
-            .get("extensions", []);
-        // console.log("exts: ", exts);
+            .get("postfix", []);
+        // console.log("postfixes: ", postfixes);
         if (delimiter === "<") {
             dirs.push(dirname(document.uri.fsPath));
         } else {
@@ -119,7 +119,7 @@ class CIncludeCompletion implements vscode.CompletionItemProvider, vscode.Dispos
             return unseen.reduce((items: vscode.CompletionItem[], entry: string) => {
                 if (entries[entry].isDirectory()) {
                     items.push(new vscode.CompletionItem(entry, vscode.CompletionItemKind.Folder));
-                } else if (exts.indexOf(extname(entry)) !== -1) {
+                } else if (postfixes.indexOf(extname(entry)) !== -1) {
                     items.push(new vscode.CompletionItem(entry, vscode.CompletionItemKind.File));
                 }
                 return items;
